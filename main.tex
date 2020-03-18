@@ -1,0 +1,222 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LaTeX Template: Curriculum Vitae
+%
+% Source: http://www.howtotex.com/
+% Feel free to distribute this template, but please keep the
+% referal to HowToTeX.com.
+% Date: July 2011
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% How to use writeLaTeX: 
+%
+% You edit the source code here on the left, and the preview on the
+% right shows you the result within a few seconds.
+%
+% Bookmark this page and share the URL with your co-authors. They can
+% edit at the same time!
+%
+% You can upload figures, bibliographies, custom classes and
+% styles using the files menu.
+%
+% If you're new to LaTeX, the wikibook is a great place to start:
+% http://en.wikibooks.org/wiki/LaTeX
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[paper=a4,fontsize=11pt]{scrartcl} % KOMA-article class
+							
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{amsmath,amsfonts,amsthm}     % Math packages
+\usepackage{graphicx}                    % Enable pdflatex
+\usepackage[svgnames]{xcolor}            % Colors by their 'svgnames'
+\usepackage{geometry}
+	\textheight=700px                    % Saving trees ;-)
+\usepackage{url}
+\usepackage{wrapfig}
+
+\frenchspacing              % Better looking spacings after periods
+\pagestyle{empty}           % No pagenumbers/headers/footers
+
+%%% Custom sectioning (sectsty package)
+%%% ------------------------------------------------------------
+\usepackage{sectsty}
+
+\sectionfont{%			            % Change font of \section command
+	\usefont{OT1}{phv}{b}{n}%		% bch-b-n: CharterBT-Bold font
+	\sectionrule{0pt}{0pt}{-5pt}{3pt}}
+
+%%% Macros
+%%% ------------------------------------------------------------
+\newlength{\spacebox}
+\settowidth{\spacebox}{8888888888}			% Box to align text
+\newcommand{\sepspace}{\vspace*{1em}}		% Vertical space macro
+
+\newcommand{\MyName}[1]{ % Name
+		\Huge \usefont{OT1}{phv}{b}{n} \hfill #1
+		\par \normalsize \normalfont}
+		
+\newcommand{\MySlogan}[1]{ % Slogan (optional)
+		\large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1}
+		\par \normalsize \normalfont}
+
+\newcommand{\NewPart}[1]{\section*{\uppercase{#1}}}
+
+\newcommand{\PersonalEntry}[2]{
+		\noindent\hangindent=2em\hangafter=0 % Indentation
+		\parbox{\spacebox}{        % Box to align text
+		\textit{#1}}		       % Entry name (birth, address, etc.)
+		\hspace{1.5em} #2 \par}    % Entry value
+
+\newcommand{\SkillsEntry}[2]{      % Same as \PersonalEntry
+		\noindent\hangindent=2em\hangafter=0 % Indentation
+		\parbox{\spacebox}{        % Box to align text
+		\textit{#1}}			   % Entry name (birth, address, etc.)
+		\hspace{1.5em} #2 \par}    % Entry value	
+		
+\newcommand{\EducationEntry}[4]{
+		\noindent \textbf{#1} \hfill      % Study
+		\colorbox{Black}{%
+			\parbox{6em}{%
+			\hfill\color{White}#2}} \par  % Duration
+		\noindent \textit{#3} \par        % School
+		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
+		\normalsize \par}
+
+\newcommand{\WorkEntry}[4]{				  % Same as \EducationEntry
+		\noindent \textbf{#1} \hfill      % Jobname
+		\colorbox{Black}{\color{White}#2} \par  % Duration
+		\noindent \textit{#3} \par              % Company
+		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
+		\normalsize \par}
+
+%%% Begin Document
+%%% ------------------------------------------------------------
+\begin{document}
+% you can upload a photo and include it here...
+\begin{wrapfigure}{l}{0.5\textwidth}
+	\vspace*{-7em}
+		\includegraphics[width=0.2\textwidth]{photo}
+\end{wrapfigure}
+
+\MyName{Vasileios Ntinas}
+\MySlogan{PhD Candidate @ DUTh \& UPC}
+
+\sepspace
+
+%%% Personal details
+%%% ------------------------------------------------------------
+\NewPart{Personal details}{}
+
+\PersonalEntry{Birth}{November 27, 1995}
+\PersonalEntry{Address}{Voulgaroktonou 18, Xanthi 67100, Greece}
+\PersonalEntry{Phone}{+306988060738}
+\PersonalEntry{Mail}{\url{konstantinos.rallis@upc.edu}}
+\PersonalEntry{}{\url{k.rallis@hotmail.com}}
+\PersonalEntry{}{\url{krallis@ee.duth.gr}}
+\PersonalEntry{Webpage}{\url{http://gsirak.ee.duth.gr/index.php/team/kostas-rallis}}
+
+%%% Education
+%%% ------------------------------------------------------------
+\NewPart{Education}{}
+
+\EducationEntry{Diploma of Electrical and Computer Engineering \\ Integrated Master of Engineering - ISCED 7 - 300 ECTS}{\footnotesize 09.2013-07.2018}{Democritus University of Thrace, Xanthi, Greece \\ Department of Electrical and Computer Engineering \\ Grade: 9.01/10 (First ($1^{st}$) of my class)}
+\sepspace
+\EducationEntry{First Year PhD Student of Democritus University of Thrace (Supervisor: G. Ch. Sirakoulis) and Universitat Polit\'ecnica de Catalunya (Supervisor: A. Rubio)}{\footnotesize 08.2018-NOW}
+\sepspace
+%%% Work experience
+%%% ------------------------------------------------------------
+
+
+
+%%% project
+%%% ------------------------------------------------------------
+\NewPart{Publications}{}
+
+
+\WorkEntry{}{}{•	K. Rallis, P. Dimitrakis, G. Ch. Sirakoulis, I. Karafyllidis, A. Rubio \textbf{“Effect of Lattice Defects on the Transport Properties of Graphene Nanoribbon”} presented by K. Rallis at the $15^{th}$ IEEE/ACM International Symposium on Nanoscale Architectures (NANOARCH), Qingdao, China, 17-19 July, 2019}
+
+\sepspace
+
+\WorkEntry{}{}{•	K. Rallis, G. Ch. Sirakoulis, I. Karafyllidis, A. Rubio \textbf{“Multi-Valued Logic Circuits on Graphene Quantum Point Contact Devices”} presented by K. Rallis at the $14^{th}$ IEEE/ACM International Symposium on Nanoscale Architectures (NANOARCH), Athens, Greece, 17-19 July, 2018}
+
+\NewPart{Conferences Organization}{}
+\WorkEntry{}{}{• Member of the Organization Committee of the $14^{th}$ IEEE/ACM International Symposium on Nanoscale Architectures (NANOARCH), Athens, Greece, 17-19 July, 2018}
+
+\NewPart{Attended Conferences}{}
+\WorkEntry{•	$15^{th}$ IEEE/ACM International Symposium on Nanoscale \\ Architectures (NANOARCH 2019)}{17-19 July 2019}{Qingdao, China}
+\sepspace
+\WorkEntry{•	$14^{th}$ IEEE/ACM International Symposium on Nanoscale \\ Architectures (NANOARCH 2018)}{17-19 July 2018}{Athens, Greece}
+\sepspace
+\WorkEntry{•	ECESCON 10}{Oct 2017}{Department of Electrical and Computer Engineering, Xanthi, Greece}
+\sepspace
+\WorkEntry{•	ECESCON 8}{Oct 2015}{Department of Electrical and Computer Engineering, Patras, Greece}
+\sepspace
+\WorkEntry{•	ECESCON 7}{April 2014}{Department of Electrical and Computer Engineering, Thessaloniki, Greece}{}
+\sepspace
+
+\NewPart{HONORS/AWARDS}{}
+
+
+\WorkEntry{}{}{•	Beneficiary of award by State Scholarship Foundation (IKY) for my performance during the first year of my studies.}
+
+\WorkEntry{}{}{•	Beneficiary of H.F.R.I Scholarship for my PhD thesis.}
+
+\NewPart{LANGUAGES}{}
+
+
+\WorkEntry{•	Greek}{}{Native Language}
+\sepspace
+\WorkEntry{•	English}{}{Level C2 \\ Proficiency in English \\ University of Michigan}
+\sepspace
+\WorkEntry{•	German}{}{Level B2 \\ National Foreign Language Exam System (KPG)}
+
+
+
+
+%\NewPart{Certifications}{}
+
+%\WorkEntry{PHP with MySQL}{}{Aspirevision Tech, Microsoft}{}
+%\sepspace
+%\WorkEntry{Cloud Computing}{}{Electrocloud Labs of NIT Durgapur}{}
+
+%%% Skills
+%%% ------------------------------------------------------------
+\NewPart{Skills}{}
+
+%\SkillsEntry{Languages}{Bengali (mother tongue)}
+%\SkillsEntry{}{English}
+%\sepspace
+
+\SkillsEntry{Programming Languages}{\textsc{C/C++}, \textsc{Python}, \textsc{PHP}, \textsc{Java}, \textsc{VHDL}, \textsc{System Verilog}}
+%\SkillsEntry{}{Python}
+%\SkillsEntry{}{PHP}
+%\SkillsEntry{}{Java}
+%\SkillsEntry{}{VHDL}
+\sepspace
+
+\SkillsEntry{Software}{\textsc{Matlab}, \textsc{PSPICE}, \textsc{LTSPICE}, \textsc{Virtuoso}, \textsc{Quartus}, \textsc{Eagle}}
+\sepspace
+\SkillsEntry{Web Development}{\textsc{HTML/HTML5}, \textsc{CSS}, \textsc{Javascript}}
+%\sepspace
+
+
+%\SkillsEntry{Subjects}{\textsc{Compiler Designing}, \textsc{Computer Nteworks}, \textsc{Algorithms}}
+%\SkillsEntry{}{\textsc{Operaing
+%System}, \textsc{DBMS}, \textsc{Microprocessor}}
+%\SkillsEntry{}{\textsc{Computer Architecture and Organisation }, \textsc{Graphics}}
+%\SkillsEntry{}{\textsc{Automata Theory and Natural Languages}}
+%\SkillsEntry{}{\textsc{Signals Systems and Circuits}, \textsc{Data Structures}}
+%\SkillsEntry{}{\textsc{Discrete Mathematics}, \textsc{Communication Systems}}
+%\SkillsEntry{}{\textsc{Digital Logic and Circuit Design}}
+
+
+%%% References, 
+%%% ------------------------------------------------------------
+%\NewPart{Extra Curricular Activities}{}
+%Available upon request
+%1. Member of Society of Information Technology, IIEST, Shibpur
+%\\
+%\sepspace
+%2. Swimming
+\end{document}
