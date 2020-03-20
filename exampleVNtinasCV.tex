@@ -23,6 +23,7 @@
 \usepackage{geometry}
 \textheight=700px               % Saving trees ;-)
 \hoffset = -0.55in
+\voffset = -0.3in
 \textwidth = 7in
 \usepackage{url}
 \usepackage{wrapfig}
@@ -92,7 +93,7 @@
 %%%%%%%%%%%%%%% Define Skills Entry Style %%%%%%%%%%%%%%%%
 \newcommand{\SkillsEntry}[2]{      % Same as \PersonalEntry
 		\noindent\hangindent=2em\hangafter=0 % Indentation
-		\parbox{\spacebox}{        % Box to align text
+		\parbox{2\spacebox}{        % Box to align text
 		\textit{#1}}			   % Entry name (birth, address, etc.)
 		\hspace{1.5em} #2 \par}    % Entry value
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -156,7 +157,7 @@
 
 % you can upload a photo and include it here...
 \begin{wrapfigure}{l}{0.5\textwidth}
-	\vspace*{-7em}
+	\vspace*{-5em}
 		\includegraphics[width=0.25\textwidth]{Files/VNtinasExample/photo.jpg}
 \end{wrapfigure}
 
@@ -164,8 +165,7 @@
 \MyTitle{D. Eng, M. Sc, PhD Candidate}
 \MyAffiliation{Democritus University of Thrace, Greece}
 \MyAffiliation{Universitat Polit\`ecnica de Catalunia, Spain}
-
-\sepspace
+\vspace*{3em}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -236,10 +236,6 @@
 %%%%%%% Here you can add any kind of working experience entry. A recommended format is the following:
 %%%%%%% \WorkEntry{"Job Title"}{"Dates"}{"Company"}{"Description"}
 \begin{itemize}[leftmargin=*]
-    \item \WorkEntry{Teaching Assistant}{\footnotesize 03.2019-07.2019}{Department of Electrical and Computer Engineering, Democritus University of Thrace}{Course: Analysis and Synthesis of Complex Electronic Systems}
-    \item \WorkEntry{Teaching Assistant}{\footnotesize 10.2018-02.2019}{Department of Electrical and Computer Engineering, Democritus University of Thrace}{Courses: Microprocessors, Embedded Systems Design}
-    \item \WorkEntry{Research Assistant}{\footnotesize 05.2018-03.2020}{Department of Electrical and Computer Engineering, Democritus University of Thrace}{“Memristive nanomaterials and electronic devices for quantum and neuromorphic computing (MEM-Q)}
-    \item \WorkEntry{Teaching Assistant}{\footnotesize 03.2018-07.2018}{Department of Electrical and Computer Engineering, Democritus University of Thrace}{Courses: Digital Circuit Design, Analysis and Synthesis of Complex Electronic Systems}
     \item \WorkEntry{Teaching Assistant}{\footnotesize 10.2017-02.2018}{Department of Electrical and Computer Engineering, Democritus University of Thrace}{Courses: Microprocessors, Embedded Systems Design}
     \item \WorkEntry{Electricity Distribution Network Designer, Database Administrator}{\footnotesize 07.2013-08.2013}{Hellenic Electricity Distribution Operator S. A., Katerini, Greece}{Summer Internship}
 \end{itemize}
@@ -285,16 +281,28 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%% Miscellaneous Entry %%%%%%%%%%%%%%%
+%%%%%%%%%%%% Miscellaneous Entries %%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\NewPart{Languages (Example for Misc. Category)}
+\NewPart{Scientific Visits \& Internships}
 
 %%%%%%% Here you can add any kind of Miscellaneous entry. A recommended format is the following:
 %%%%%%% \MiscEntry{"Title"}{"Description"}
 %%%%%%% \MiscEntryDate{"Title"}{"Date"}{"Description"}
 \begin{itemize}[leftmargin=*]
-    \item \MiscEntry{XXXXXXX}{Native Language}
-    \item \MiscEntryDate{XXXXXXXXXX}{\footnotesize MM.YYYY}{Certificate Details}
+    \item \MiscEntryDate{Memristive Networks and Systems}{\footnotesize 13-20.03.2016}{Short-term Scientific Mission (STSM) – MemoCIS COST Action\\University of Catania, Catania, Italy}
+    \sepspace
+    \item \MiscEntryDate{2$^{nd}$ Training School on Memristors - \\Devices, Models, Circuits, Systems and Applications}{\footnotesize 7-9.05.2016}{COST Action IC1401 - MemoCIS \\Alghero, Italy}
+\end{itemize}
+\sepspace
+
+\NewPart{Workshops \& Training Schools}
+
+%%%%%%% Here you can add any kind of Miscellaneous entry. A recommended format is the following:
+%%%%%%% \MiscEntry{"Title"}{"Description"}
+%%%%%%% \MiscEntryDate{"Title"}{"Date"}{"Description"}
+\begin{itemize}[leftmargin=*]
+    \item \MiscEntryDate{6$^{th}$ Workshop on Memristors - \\Devices, Models, Circuits, Systems and Applications}{\footnotesize 21-22.09.2017}{COST Action IC1401 - MemoCIS \\Krakow, Poland}
+    \item \MiscEntryDate{2$^{th}$ Training School on Memristors - \\Devices, Models, Circuits, Systems and Applications}{\footnotesize 7-9.05.2016}{COST Action IC1401 - MemoCIS \\Alghero, Italy}
 \end{itemize}
 \sepspace
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -312,7 +320,9 @@
 %%%%%%% Here you can add any kind of Skills entry. A recommended format is the following:
 %%%%%%% \SkillsEntry{"Category"}{"Items"}
 \begin{itemize}
-    \item[] \SkillsEntry{Programming Languages}{\textsc{C/C++},........}
+    \item[] \SkillsEntry{Languages}{Greek (Native Language)}
+    \item[] \SkillsEntry{}{English (Level C2 - University of Michigan)}
+    \item[] \SkillsEntry{Programming}{\textsc{C/C++},........}
     \item[] \SkillsEntry{Software}{\textsc{Matlab},.....}
 \end{itemize}
 \sepspace

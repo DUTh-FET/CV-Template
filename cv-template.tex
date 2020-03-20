@@ -23,6 +23,7 @@
 \usepackage{geometry}
 \textheight = 700px               % Saving trees ;-)
 \hoffset = -0.55in
+\voffset = -0.3in
 \textwidth = 7in
 \usepackage{url}
 \usepackage{wrapfig}
@@ -84,7 +85,7 @@
 %%%%%%%%%%%%%%% Define Personal Details Entry Style %%%%%%%%%%%%%%%%
 \newcommand{\PersonalEntry}[2]{
 		\noindent\hangindent=2em\hangafter=0 % Indentation
-		\parbox{\spacebox}{        % Box to align text
+		\parbox{1.2\spacebox}{        % Box to align text
 		\textit{#1}}		       % Entry name (birth, address, etc.)
 		\hspace{1.5em} #2 \par}    % Entry value
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -92,7 +93,7 @@
 %%%%%%%%%%%%%%% Define Skills Entry Style %%%%%%%%%%%%%%%%
 \newcommand{\SkillsEntry}[2]{      % Same as \PersonalEntry
 		\noindent\hangindent=2em\hangafter=0 % Indentation
-		\parbox{\spacebox}{        % Box to align text
+		\parbox{1.2\spacebox}{        % Box to align text
 		\textit{#1}}			   % Entry name (birth, address, etc.)
 		\hspace{1.5em} #2 \par}    % Entry value
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -156,18 +157,14 @@
 
 % you can upload a photo and include it here...
 \begin{wrapfigure}{l}{0.5\textwidth}
-	\vspace*{-7em}
+	\vspace*{-5em}
 		\includegraphics[width=0.25\textwidth]{Files/photo.png}
 \end{wrapfigure}
 
 \MyName{Name Surname}
 \MyTitle{Title Abbrev.}
 \MyAffiliation{University}
-% \MyTitle{D. Eng, M. Sc, PhD Candidate}
-% \MyAffiliation{Democritus University of Thrace, Greece}
-% \MyAffiliation{Universitat Polit\`ecnica de Catalunia, Spain}
-
-\sepspace
+\vspace*{3em}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -278,14 +275,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%% Miscellaneous Entry %%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\NewPart{Languages (Example for Misc. Category)}
+\NewPart{Conference Attendance (Example for Misc. Category)}
 
 %%%%%%% Here you can add any kind of Miscellaneous entry. A recommended format is the following:
 %%%%%%% \MiscEntry{"Title"}{"Description"}
 %%%%%%% \MiscEntryDate{"Title"}{"Date"}{"Description"}
 \begin{itemize}[leftmargin=*]
-    \item \MiscEntry{XXXXXXX}{Native Language}
-    \item \MiscEntryDate{XXXXXXXXXX}{\footnotesize MM.YYYY}{Certificate Details}
+    \item \MiscEntry{XXXXXXX}{City, Country}
+    \item \MiscEntryDate{XXXXXXX}{\footnotesize MM.YYYY}{City, Country}
 \end{itemize}
 \sepspace
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -303,8 +300,9 @@
 %%%%%%% Here you can add any kind of Skills entry. A recommended format is the following:
 %%%%%%% \SkillsEntry{"Category"}{"Items"}
 \begin{itemize}
-    \item[] \SkillsEntry{Programming Languages}{\textsc{C/C++},........}
-    \item[] \SkillsEntry{Software}{\textsc{Matlab},.....}
+    \item[] \SkillsEntry{Languages}{XXXXXXX (Native Language)}
+    \item[] \SkillsEntry{}{XXXXXXX (Level C2)}
+    \item[] \SkillsEntry{Programming}{\textsc{C/C++},........}
 \end{itemize}
 \sepspace
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
