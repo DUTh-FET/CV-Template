@@ -7,4 +7,4 @@ You can easily integrate this template to your own Overleaf account. To do so, p
 
 https://www.overleaf.com/read/bwvkqnrzgndy
 
-The Overleaf project of the above link is "view-only", so you just need to make your own copy of this project. The Overleaf platform provide this feature.
+The Overleaf project of the above link is "view-only", so you just need to make your own copy of this project.
