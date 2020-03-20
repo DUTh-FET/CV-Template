@@ -22,10 +22,16 @@
 \usepackage[svgnames]{xcolor}            % Colors by their 'svgnames'
 \usepackage{geometry}
 \textheight=700px               % Saving trees ;-)
+\hoffset = -0.55in
+\textwidth = 7in
 \usepackage{url}
 \usepackage{wrapfig}
-\usepackage[style=authoryear,bibstyle=numeric,sorting=none]{biblatex}
+\usepackage[style=authoryear,bibstyle=numeric,sorting=none,maxbibnames=99]{biblatex}
 \usepackage{enumitem}
+\usepackage{hyperref}
+\hypersetup{   
+    urlcolor=black,
+}
 
 \frenchspacing              % Better looking spacings after periods
 \pagestyle{empty}           % No pagenumbers/headers/footers
@@ -61,7 +67,7 @@
 
 %%%%%%%%%%%%%%% Name/Title/Affiliation Style %%%%%%%%%%%%%%%%
 \newcommand{\MyName}[1]{
-		\Huge \usefont{OT1}{phv}{b}{n} #1
+		\Huge \usefont{OT1}{phv}{b}{n}\hfill \textit{#1}
 		\par \normalsize \normalfont}
 \newcommand{\MyTitle}[1]{
 		\large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1}
@@ -171,12 +177,13 @@
 %%%%%%% \PersonalEntry{"entry name"}{"entry value"}
 \begin{itemize}[noitemsep]
     \item[] \PersonalEntry{Birth}{November 07, 1992}
-    \item[] \PersonalEntry{Address}{Evzonon 16-20, Xanthi, Greece}
+    \item[] \PersonalEntry{Address}{XXXXXX 1, Xanthi, Greece}
     \item[] \PersonalEntry{Phone}{XXXXXX, XXXXXX}
     \item[] \PersonalEntry{Mail}{\url{vntinas@ee.duth.gr}}
     %%%%%%% For a second e-mail account, please use:
     \item[] \PersonalEntry{}{\url{vasileios.ntinas@upc.edu}}
     \item[] \PersonalEntry{Webpage}{\url{http://vntinas.eu}}
+    \item[] \PersonalEntry{}{\url{https://scholar.google.gr/citations?user=RCeprCUAAAAJ&hl=en}}
 \end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -192,7 +199,9 @@
 
 %%%%%%% Here you can add any kind of education entry. A recommended format is the following:
 %%%%%%% \EducationEntry{"Degree Title"}{"Dates"}{"University"\\"Department"}{"Any Comment"}
-\EducationEntry{Diploma of XXXXXXXXXXXXX}{\footnotesize MM.YYYY-MM.YYYY}{University, City, Country \\ Department of XXXXXXXXXXXXX}{Grade: XX.XX/10}
+\EducationEntry{PhD on Emergent Computing with Memristors}{\footnotesize 09.2017-NOW}{Democritus University of Thrace, Xanthi, Greece \\ Universitat Polit\`ecnica de Catalunia, Barcelona, Spain}{Supervisors: Prof. G. Ch. Sirakoulis \& Prof. A. Rubio}
+\EducationEntry{Master of Science on Microelectronics and Computer Systems (M. Sc.)}{\footnotesize 10.2015-03.2017}{Democritus University of Thrace, Xanthi, Greece \\ Department of Electrical and Computer Engineering}{Grade: 9.92/10\\Thesis: Smart Bio-inspired Electronic Systems with Memristive Devices}
+\EducationEntry{Diploma of Electrical and Computer Engineering (D. Eng.)}{\footnotesize 09.2010-07.2015}{Democritus University of Thrace, Xanthi, Greece \\ Department of Electrical and Computer Engineering}{Grade: 8.19/10\\Thesis: Study, design and development of electronic circuits, inspired by nature, with learning capabilities, using circuit elements with memory (Memristors)}
 \sepspace
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -209,8 +218,7 @@
 %%%%%%% Here you can add any kind of honour/award entry. A recommended format is the following:
 %%%%%%% \AwardEntry{"Award Title"}{"Date"}{"Award Description"}
 \begin{itemize}[leftmargin=*]
-    \item \AwardEntry{Title of $1^{st}$ Award}{\footnotesize MM.YYYY}{University of XXXXXXXXXXXXXX}
-    \item \AwardEntry{Title of $2^{nd}$ Award}{\footnotesize MM.YYYY}{University of XXXXXXXXXXXXXX}
+    \item \AwardEntry{Best Diploma Thesis Award (2015)}{\footnotesize 03.2016}{Department of Electrical and Computer Engineering, Democritus University of Thrace, Xanthi, Greece}
 \end{itemize}
 \sepspace
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -228,8 +236,12 @@
 %%%%%%% Here you can add any kind of working experience entry. A recommended format is the following:
 %%%%%%% \WorkEntry{"Job Title"}{"Dates"}{"Company"}{"Description"}
 \begin{itemize}[leftmargin=*]
-    \item \WorkEntry{Job Position}{\footnotesize MM.YYYY}{Company}{Details}
-    \item \WorkEntry{Other Job Position}{\footnotesize MM.YYYY}{Company}{Details}
+    \item \WorkEntry{Teaching Assistant}{\footnotesize 03.2019-07.2019}{Department of Electrical and Computer Engineering, Democritus University of Thrace}{Course: Analysis and Synthesis of Complex Electronic Systems}
+    \item \WorkEntry{Teaching Assistant}{\footnotesize 10.2018-02.2019}{Department of Electrical and Computer Engineering, Democritus University of Thrace}{Courses: Microprocessors, Embedded Systems Design}
+    \item \WorkEntry{Research Assistant}{\footnotesize 05.2018-03.2020}{Department of Electrical and Computer Engineering, Democritus University of Thrace}{“Memristive nanomaterials and electronic devices for quantum and neuromorphic computing (MEM-Q)}
+    \item \WorkEntry{Teaching Assistant}{\footnotesize 03.2018-07.2018}{Department of Electrical and Computer Engineering, Democritus University of Thrace}{Courses: Digital Circuit Design, Analysis and Synthesis of Complex Electronic Systems}
+    \item \WorkEntry{Teaching Assistant}{\footnotesize 10.2017-02.2018}{Department of Electrical and Computer Engineering, Democritus University of Thrace}{Courses: Microprocessors, Embedded Systems Design}
+    \item \WorkEntry{Electricity Distribution Network Designer, Database Administrator}{\footnotesize 07.2013-08.2013}{Hellenic Electricity Distribution Operator S. A., Katerini, Greece}{Summer Internship}
 \end{itemize}
 \sepspace
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -243,14 +255,24 @@
 %%%%%%%%%%%% Publications %%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \NewPart{Publications}
+
+%%%%%%% Here you can generate your publication list automatically by including them 
+%%%%%%% in the corresponding ".bib" file. This method generates the whole content of each ".bib".
+%%%%%%% Also, you can easily add new categories, like "Book Chapters" by
+%%%%%%% coping the content (5 lines) of the "\item".
 \begin{enumerate}[label=\textbf{\Alph*.},leftmargin=*]
+    \item   \textbf{Book Chapters}
+            \begin{refsection}[Files/VNtinasExample/chapters.bib]
+            \nocite{*}
+            \printbibliography[heading=none]
+            \end{refsection}
     \item   \textbf{Referred Journal Articles}
-            \begin{refsection}[Files/journals.bib]
+            \begin{refsection}[Files/VNtinasExample/journals.bib]
             \nocite{*}
             \printbibliography[heading=none]
             \end{refsection}
     \item   \textbf{Conference Presentations}
-            \begin{refsection}[Files/conferences.bib]
+            \begin{refsection}[Files/VNtinasExample/conferences.bib]
             \nocite{*}
             \printbibliography[heading=none]
             \end{refsection}
